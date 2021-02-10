@@ -1,0 +1,20 @@
+Methods to learn: 
+
+- Pipe
+- flow
+- fold
+- Either
+- Task
+- TaskEither
+- Chain
+- ChainFirst
+- ChainEither and all other related methods
+- Map
+- tryCatch
+- tryCatchK
+- IOEither
+- Bind
+- BindTo
+
+
+- I am aiming to explain my understanding with some examples for each method
