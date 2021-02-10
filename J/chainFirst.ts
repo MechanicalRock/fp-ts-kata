@@ -1,14 +1,15 @@
 import * as fp from "fp-ts";
-import { chain, of } from 'fp-ts/Either';
+import { chainFirst, of } from 'fp-ts/Either';
 
-const func2 = (a:string) => of(a+a)
-
-const x = chain(
+const func2 = (a:string) => {
+    console.log(a+a+a);
+    return of("blyat")
+}
+const x = chainFirst(
     func2,
     );
 const aTaskEither = of("something")
 
-console.log(func2("something"))
 //same as
 console.log(x(aTaskEither));
 
