@@ -1,24 +1,28 @@
 import { pipe } from 'fp-ts/lib/function';
-import { bind, bindTo, chainFirst, fromIO, IOEither, right } from 'fp-ts/IOEither';
+import { chainFirst, fromIO, IOEither, map, right, left, fold } from 'fp-ts/IOEither';
+
+import { of } from 'fp-ts/IO';
 
 export const add = (a: number): IOEither<Error, number> => {
   if (a < 10) {
     return right(a + 10);
-  } else throw new Error('your number must be less than 10');
+  } else return left(new Error('your number must be less than 10'));
 };
 
 const secondAdd = (result: number): number => {
-  return result + 10;
+  return result + 20;
 };
 
-const checkItem = (result: number) =>
-  chainFirst(() =>
-    fromIO(() => {
-      console.log('R is: ', result);
-      return result;
-    }),
-  );
+const result = pipe(
+  add(4),
+  chainFirst((result) => fromIO(() => console.log(result))),
+  map(secondAdd),
+  fold(
+    () => of(100),
+    (a) => of(a + 200),
+  ),
+);
 
-const result = pipe(add(4), checkItem, secondAdd);
+const result = pipe(4, add, chainFirst(checkItem), secondAdd);
 
-console.log(result());
+console.log(result);
