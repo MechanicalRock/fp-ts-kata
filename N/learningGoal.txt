@@ -1,3 +1,23 @@
+Good To Know: 
+    - Type class: The programmer defines a type class by specifying a set of functions or constant names, 
+                together with their respective types,
+                that must exist for every type that belongs to the class
+                In fp-ts type classes are encoded as TypeScript interfaces
+
+FP-TS:
+semigroup: is a pair of `(A, function that takes two elements of A as input and returns an element of A as output)`.
+            captures the concept of "merging" values (via concat).
+            examples : (number, *) , (number, +) , (number, &&)
+Functor : something that takes one type and returns another e.g. a => b like map
+            
+Bifunctor : is when you are dealing with stuff that might need to map either both sides of a type, or the “other” side -
+            examples: Either<T,U> => bifunctors are mapLeft and bimap 
+            (because these map over the left side as well as the right)
+
+Monad:  stuff is usually constructors - all the “classes” like TaskEither, Either etc, are monads.
+Utils:  are just random collections of functions that don’t make sense to put elsewhere
+
+
 Methods to learn: 
 
 - Pipe
@@ -15,6 +35,7 @@ Methods to learn:
 - IOEither
 - Bind util for almost all of methods
 - BindTo util for almost all of methods
+- Left, Right
 
 
 - I am aiming to explain my understanding with some examples for each method

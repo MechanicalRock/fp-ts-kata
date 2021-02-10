@@ -1,0 +1,9 @@
+Syntax:
+    fold()
+What it does:
+    - Takes two functions and an Either value, if the value is a Left the inner value is applied to the first function,
+    if the value is a Right the inner value is applied to the second function.
+
+    definition: 
+    
+    fold<E, A, B>(onLeft: (e: E) => B, onRight: (a: A) => B): (ma: Either<E, A>) => B
