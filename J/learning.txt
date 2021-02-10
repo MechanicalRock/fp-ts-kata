@@ -1,0 +1,14 @@
+Pipe, Flow
+tryCatch, tryCatchK
+chain, chainFirst
+fold, bind, bindTo, of
+Task, TaskEither
+
+Level 1:
+I can write something that's syntactically valid in isolation
+
+Level 2:
+I can explain when you should use it
+
+Level 3:
+I can write and compose with other functions
