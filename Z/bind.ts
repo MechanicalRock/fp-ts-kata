@@ -7,13 +7,13 @@ export const add = (a: number): IOEither<Error, number> => {
   } else throw new Error('your number must be less than 10');
 };
 
-const textDetails = (firstnumber: number, result: number): string => {
+const textDetails = (firstnumber: number, result: number): IOEither<Error, string> => {
   return `${firstnumber} + 10 equals ${result} `;
 };
 
 const result = () =>
   pipe(
-    bindTo('result')(add(4)),
-    bind('textDetails', (result) => textDetails(4, result)),
-    bind('final', (textDetails) => console.log(JSON.stringify(textDetails))),
+    bindTo('r')(add(4)),
+    bind('textDetails', (addedNumber) => textDetails(4, addedNumber.r)),
+    bind('final', (finalObject) => console.log(JSON.stringify(finalObject))),
   );
