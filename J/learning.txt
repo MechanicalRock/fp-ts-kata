@@ -3,7 +3,7 @@ tryCatch, tryCatchK
 chain, chainFirst
 fold, bind, bindTo, of
 Task, TaskEither
-From(x), Chain(x)
+FromX, ChainX
 
 Level 0:
 No idea what this thing is
