@@ -4,11 +4,15 @@ chain, chainFirst
 fold, bind, bindTo, of
 Task, TaskEither
 
+Level 0:
+No idea what this thing is
+
 Level 1:
 I can write something that's syntactically valid in isolation
 
 Level 2:
 I can explain when you should use it
+I can read/understand the function signature
 
 Level 3:
 I can write and compose with other functions
