@@ -1,0 +1,6 @@
+What it Does:
+    - pipe takes an arbitrary number of arguments
+    - first function tasks the argument
+    - return type of a preceding function in the pipeline must match the input type of the subsequent function
+When to use: 
+    - Yo chain a sequence of functions from left-to-right 
