@@ -1,11 +1,11 @@
-import { Either, of, fromNullable, right, tryCatch } from "fp-ts/lib/Either";
+import { Either, fromNullable, tryCatch } from "fp-ts/lib/Either";
 
-import { add, multiply } from "../Pipe/Example";
+import { add } from "../Pipe/Example";
 
-// const errorMessage = "input was null or undefined";
-// const toEither = fromNullable(errorMessage);
-// console.log(toEither("Test")); // { _tag: 'Right', right: 'Test' }
-// console.log(toEither(undefined)); //{ _tag: 'Left', left: 'input was null or undefined' }
+const errorMessage = "input was null or undefined";
+const toEither = fromNullable(errorMessage);
+console.log(toEither("Test")); // { _tag: 'Right', right: 'Test' }
+console.log(toEither(undefined)); //{ _tag: 'Left', left: 'input was null or undefined' }
 
 const AddORMultiply = (n: number) => {
   if (n > 10) {
