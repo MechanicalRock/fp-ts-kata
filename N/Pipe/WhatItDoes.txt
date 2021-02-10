@@ -3,4 +3,4 @@ What it Does:
     - first function tasks the argument
     - return type of a preceding function in the pipeline must match the input type of the subsequent function
 When to use: 
-    - Yo chain a sequence of functions from left-to-right 
+    - To chain a sequence of functions from left-to-right 

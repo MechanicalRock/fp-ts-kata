@@ -1,0 +1,15 @@
+Syntax : 
+    flow(f1,f2,f3)(arg)
+What it does?
+    - Same as Pipe but the first argument should be a function
+    - First function can have one or more input
+When to use?
+    - when we don't want to avoid using an anonymous function
+
+    Example 
+    given: 
+        Func(arg ,(arg)=>string)=> [arg,string]
+    then:
+        Func(arg, (arg)=>pipe(arg,f1,f2,f3)) 
+    to avoid this we can use:
+        Func(arg,flow(f1,f2,f3));

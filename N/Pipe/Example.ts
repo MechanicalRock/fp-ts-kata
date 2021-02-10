@@ -1,10 +1,10 @@
 import { pipe } from "fp-ts/lib/function";
 
-const add = (a: number): number => {
+export const add = (a: number): number => {
   return a + 4;
 };
 
-const multiply = (a: number): number => {
+export const multiply = (a: number): number => {
   return a * 2;
 };
 
