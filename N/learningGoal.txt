@@ -21,17 +21,17 @@ Utils:  are just random collections of functions that don’t make sense to put 
 
 Methods to learn: 
 
-- Task **
-- TaskEither
-- Either ** 
-- Pipe **
-- Flow **
-- Fold is destructors for either and taskEither **
+- Task ** DONE
+- TaskEither ** DONE
+- Either **  DONE
+- Pipe ** DONE
+- Flow ** DONE
+- Fold is destructors for either and taskEither ** only for either
 - Chain
 - Either : Combinators and constructors i.e ChainFirst
-- TaskEither : Combinators and constructors i.e chainEitherK,chainIOEitherK, fromEither, fromEitherK,...
+- TaskEither : Combinators and constructors i.e chain,chainEitherK,chainIOEitherK, fromEither, fromEitherK,...
 - Map
-- tryCatch constructor for either, taskEither
+- tryCatch constructor for either, taskEither ** DONE
 - tryCatchK combinator for taskEither
 - IOEither
 - Bind util for almost all of methods
