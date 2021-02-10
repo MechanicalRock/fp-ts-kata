@@ -1,0 +1,22 @@
+{
+  "name": "fp-private-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MechanicalRock/fp-private-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MechanicalRock/fp-private-practice/issues"
+  },
+  "homepage": "https://github.com/MechanicalRock/fp-private-practice#readme",
+  "dependencies": {
+    "fp-ts": "^2.9.5"
+  }
+}
