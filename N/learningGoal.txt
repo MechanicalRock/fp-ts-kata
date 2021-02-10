@@ -17,23 +17,3 @@ Bifunctor : is when you are dealing with stuff that might need to map either bot
 Monad:  stuff is usually constructors - all the “classes” like TaskEither, Either etc, are monads.
 Utils:  are just random collections of functions that don’t make sense to put elsewhere
 
-
-
-Methods to learn: 
-
-- Task ** DONE
-- TaskEither ** DONE
-- Either **  DONE
-- Pipe ** DONE
-- Flow ** DONE
-- Fold is destructors for either and taskEither ** only for either
-- Chain
-- Either : Combinators and constructors i.e ChainFirst
-- TaskEither : Combinators and constructors i.e chain,chainEitherK,chainIOEitherK, fromEither, fromEitherK,...
-- Map
-- tryCatch constructor for either, taskEither ** DONE
-- tryCatchK combinator for taskEither
-- IOEither
-- Bind util for almost all of methods
-- BindTo util for almost all of methods
-- Left, Right
