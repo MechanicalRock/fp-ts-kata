@@ -8,12 +8,12 @@ export const add = (a: number): IOEither<Error, number> => {
 };
 
 const textDetails = (firstnumber: number, result: number): IOEither<Error, string> => {
-  return `${firstnumber} + 10 equals ${result} `;
+  return right(`${firstnumber} + 10 equals ${result} `);
 };
 
 const result = () =>
   pipe(
     bindTo('r')(add(4)),
     bind('textDetails', (addedNumber) => textDetails(4, addedNumber.r)),
-    bind('final', (finalObject) => console.log(JSON.stringify(finalObject))),
+    (finalObject) => console.log(JSON.stringify(finalObject)),
   );
