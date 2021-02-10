@@ -7,19 +7,17 @@ export const add = (a: number): IOEither<Error, number> => {
   } else throw new Error('your number must be less than 10');
 };
 
-const textDetails = (firstnumber: number, result: number): IOEither<Error, string> => {
-  return right(`${firstnumber} + 10 equals ${result} `);
+const secondAdd = (result: number): number => {
+  return result + 10;
 };
 
-const result = pipe(
-  bindTo('result')(add(4)),
-  bind('textDetails', (addedNumber) => textDetails(4, addedNumber.result)),
-  chainFirst((finalObject) =>
-    fromIO(() => {
-      console.log('R is: ', JSON.stringify(finalObject));
-      return finalObject;
-    }),
-  ),
+const checkItem = chainFirst((r) =>
+  fromIO(() => {
+    console.log('R is: ', r);
+    return r;
+  }),
 );
 
-result();
+const result = pipe(add(4), checkItem, secondAdd);
+
+console.log(result());
