@@ -11,12 +11,13 @@ const secondAdd = (result: number): number => {
   return result + 10;
 };
 
-const checkItem = chainFirst((r) =>
-  fromIO(() => {
-    console.log('R is: ', r);
-    return r;
-  }),
-);
+const checkItem = (result: number) =>
+  chainFirst(() =>
+    fromIO(() => {
+      console.log('R is: ', result);
+      return result;
+    }),
+  );
 
 const result = pipe(add(4), checkItem, secondAdd);
 
