@@ -23,6 +23,4 @@ const result = pipe(
   ),
 );
 
-const result = pipe(4, add, chainFirst(checkItem), secondAdd);
-
-console.log(result);
+console.log(result());
