@@ -13,6 +13,6 @@ const numberActions = (n: number) => {
 };
 
 const result = () => {
-  console.log(numberActions(4));
+  numberActions(4);
 };
 result();
