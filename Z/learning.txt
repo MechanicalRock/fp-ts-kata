@@ -1,0 +1,30 @@
+chainIOEitherK and chainTaskEitherK (and the difference between those)
+TryCatchK (and why would I need it?)
+Map? (how the hell do I use it and why or when?)
+left, right (when would I need any of those?)
+FromEither (when do I need it? is there a FromTask too?) 
+fold, flow (why would I need any of those)
+bind (kinda know what it does but not too detailed )
+
+
+chain{IOEither]K and chain[TaskEither]K - the types are the hint. the ’K” mean it returns a function that returns the inner type.
+IOEither - synchronous computation that might throw an error (assertion)
+TaskEither - asynchronous computation that might throw an error (making a remote call that returns a promise)
+TryCatchK - convert a function that returns a promise<A> to TaskEither<E,A>
+Map - convert something inside something to another type (E,g, not performing another computation - just ‘mapping’ something to something else
+
+
+
+
+Level 0:
+No idea what this thing is
+
+Level 1:
+I can write something that's syntactically valid in isolation
+
+Level 2:
+I can explain when you should use it
+I can read/understand the function signature
+
+Level 3:
+I can write and compose with other functions

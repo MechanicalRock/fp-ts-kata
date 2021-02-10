@@ -1,6 +1,6 @@
 # Explanation in words:
 
-bind is useful for building an object up that has results for a bunch of computations inside it
+bind is useful for building an object up that is constructed from combination return values of multiple functions
 
 # Examples:
 
