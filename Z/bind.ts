@@ -13,7 +13,7 @@ const textDetails = (firstnumber: number, result: number): IOEither<Error, strin
 
 const result = () =>
   pipe(
-    bindTo('r')(add(4)),
-    bind('textDetails', (addedNumber) => textDetails(4, addedNumber.r)),
+    bindTo('result')(add(4)),
+    bind('textDetails', (addedNumber) => textDetails(4, addedNumber.result)),
     (finalObject) => console.log(JSON.stringify(finalObject)),
   );
