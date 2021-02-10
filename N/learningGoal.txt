@@ -1,4 +1,4 @@
-Good To Know: 
+info:
     - Type class: The programmer defines a type class by specifying a set of functions or constant names, 
                 together with their respective types,
                 that must exist for every type that belongs to the class
@@ -18,14 +18,15 @@ Monad:  stuff is usually constructors - all the “classes” like TaskEither, E
 Utils:  are just random collections of functions that don’t make sense to put elsewhere
 
 
+
 Methods to learn: 
 
-- Pipe
-- Flow
-- Fold is destructors for either and taskEither
-- Either
-- Task
+- Task **
 - TaskEither
+- Either ** 
+- Pipe **
+- Flow **
+- Fold is destructors for either and taskEither **
 - Chain
 - Either : Combinators and constructors i.e ChainFirst
 - TaskEither : Combinators and constructors i.e chainEitherK,chainIOEitherK, fromEither, fromEitherK,...
@@ -36,8 +37,3 @@ Methods to learn:
 - Bind util for almost all of methods
 - BindTo util for almost all of methods
 - Left, Right
-
-
-- I am aiming to explain my understanding with some examples for each method
-
-- Each method in fp has constructor, combinators , destructors, utils I need to look at those for each method

@@ -1,7 +1,7 @@
 import { fold, left, right } from "fp-ts/Either";
-import { add, multiply } from "../Pipe/Example";
+import { add } from "../Pipe/Example";
 
-//export declare function fold<E, A, B>(onLeft: (e: E) => B, onRight: (a: A) => B): (ma: Either<E, A>) => B
+//Either: export declare function fold<E, A, B>(onLeft: (e: E) => B, onRight: (a: A) => B): (ma: Either<E, A>) => B
 
 const operation = fold<Error, number, unknown>((e: Error) => e, add);
 
