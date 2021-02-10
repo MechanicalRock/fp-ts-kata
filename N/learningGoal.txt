@@ -1,20 +1,22 @@
 Methods to learn: 
 
 - Pipe
-- flow
-- fold
+- Flow
+- Fold is destructors for either and taskEither
 - Either
 - Task
 - TaskEither
 - Chain
-- ChainFirst
-- ChainEither and all other related methods
+- Either : Combinators and constructors i.e ChainFirst
+- TaskEither : Combinators and constructors i.e chainEitherK,chainIOEitherK, fromEither, fromEitherK,...
 - Map
-- tryCatch
-- tryCatchK
+- tryCatch constructor for either, taskEither
+- tryCatchK combinator for taskEither
 - IOEither
-- Bind
-- BindTo
+- Bind util for almost all of methods
+- BindTo util for almost all of methods
 
 
 - I am aiming to explain my understanding with some examples for each method
+
+- Each method in fp has constructor, combinators , destructors, utils I need to look at those for each method
