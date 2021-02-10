@@ -11,3 +11,7 @@ import { Task } from "fp-ts/Task"
 const ATask: Task<number> = ():Promise<number> => new Promise(() => 1); 
 
 // Theres nothing really special about it!
+
+// Hey we can use `of` to create a task!
+
+const AnotherTask: Task<string> = fp.task.of("This is still a task!")
