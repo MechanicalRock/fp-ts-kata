@@ -5,6 +5,8 @@ info:
                 In fp-ts type classes are encoded as TypeScript interfaces
 
 FP-TS:
+constructor, meaning it can create the data structure.
+
 semigroup: is a pair of `(A, function that takes two elements of A as input and returns an element of A as output)`.
             captures the concept of "merging" values (via concat).
             examples : (number, *) , (number, +) , (number, &&)
@@ -17,3 +19,9 @@ Bifunctor : is when you are dealing with stuff that might need to map either bot
 Monad:  stuff is usually constructors - all the “classes” like TaskEither, Either etc, are monads.
 Utils:  are just random collections of functions that don’t make sense to put elsewhere
 
+
+chain{IOEither]K and chain[TaskEither]K - the types are the hint. the ’K” mean it returns a function that returns the inner type.
+IOEither - synchronous computation that might throw an error (assertion)
+TaskEither - asynchronous computation that might throw an error (making a remote call that returns a promise)
+TryCatchK - convert a function that returns a promise<A> to TaskEither<E,A>
+Map - convert something inside something to another type (E,g, not performing another computation - just ‘mapping’ something to something else
