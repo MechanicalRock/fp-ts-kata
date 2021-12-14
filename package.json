@@ -18,7 +18,7 @@
   "homepage": "https://github.com/MechanicalRock/fp-private-practice#readme",
   "dependencies": {
     "assert": "^2.0.0",
-    "fp-ts": "^2.9.5"
+    "fp-ts": "^2.11.5"
   },
   "devDependencies": {
     "@types/assert": "^1.5.4"
